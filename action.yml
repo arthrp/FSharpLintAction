@@ -1,0 +1,15 @@
+name: 'FSharp linter'
+description: 'Lint your FSharp app'
+inputs:
+  lint-filepath:  # id of input
+    description: 'Path to file to be linted'
+    required: true
+    default: '.'
+outputs:
+  output:
+    description: 'Linter output'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.lint-filepath }}

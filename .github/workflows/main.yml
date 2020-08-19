@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  lint_job:
+    runs-on: mcr.microsoft.com/dotnet/core/sdk:3.1.401-focal
+    name: Linting job
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Linting step
+        uses: ./ # Uses an action in the root directory
+        id: fsharplint
+        with:
+          lint-filepath: SampleProgram.fs
