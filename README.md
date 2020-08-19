@@ -1,3 +1,3 @@
-# FSharplinter action
+# FSharplint action
 
-Run fsharplinter as Github action
+Run [fsharplint](https://github.com/fsprojects/FSharpLint/) as Github action
