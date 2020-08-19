@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   lint_job:
-    runs-on: mcr.microsoft.com/dotnet/core/sdk:3.1.401-focal
+    runs-on: ubuntu-latest
     name: Linting job
     steps:
       - name: Checkout
